@@ -73,8 +73,14 @@ App = {
     createTask: async () => {
         App.setLoading(true)
         const content = $('#newTask').val()
-        console.log(App.todoList.methods)
-        await App.todoList.methods.createTask(content).send({from: App.account});
+        //.send({from: App.account});
+        window.location.reload()
+      },
+
+      toggleCompleted: async (e) => {
+        App.setLoading(true)
+        const taskId = e.target.name
+        await App.todoList.toggleCompleted(taskId)
         window.location.reload()
       },
 
