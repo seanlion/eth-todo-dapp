@@ -6,6 +6,7 @@
 - truffle suite
 - ganache(local development)
 - truffle-plugin-verify
+- lite-server(local development)
 
 ### Test
 - `truffle test`
@@ -15,3 +16,6 @@
 
 ### Verify
 - `truffle run verify TodoList --network rinkeby`
+
+### Local App build
+- `npm run dev`
